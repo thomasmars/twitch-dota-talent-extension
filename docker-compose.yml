@@ -9,8 +9,8 @@ services:
       - /boilerplate/backend/node_modules
 
     build:
-      context: ./backend
-      dockerfile: ./Dockerfile
+      context: backend
+      dockerfile: Dockerfile
 
     ports:
       - "8080:8080"

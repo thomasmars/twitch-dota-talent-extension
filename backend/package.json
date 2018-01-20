@@ -1,7 +1,9 @@
 {
   "author": "Twitch Interactive, Inc.",
   "dependencies": {
-    "express": "^4.15.4"
+    "axios": "^0.17.1",
+    "express": "^4.15.4",
+    "jsonwebtoken": "^8.1.0"
   },
   "description": "Provides a simple starting point to create and locally develop your Twitch extension.",
   "license": "Apache-2.0",

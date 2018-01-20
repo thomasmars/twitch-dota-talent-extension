@@ -14,17 +14,28 @@ or in the "license" file accompanying this file. This file is distributed on an 
 
 -->
 <html lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/common.css">
-        <link rel="stylesheet" href="css/config.css">
-    </head>
-    <body>
-        <p>This is the config page! Does this hot-reload ? nice-la</p>
-        <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
-        <script src="js/common.js"></script>
-        <script src="js/config.js"></script>
-    </body>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/config.css">
+</head>
+<body>
+  <div id="dota-illuminate">
+    <h1 id="client-header">Get Client</h1>
+    <div id="client-info">To enable the extension it must connect with your game locally. For this you need the Dota Illuminate Client.</div>
+    <button id="get-client">Get Dota Illuminate Client</button>
+    <h1 id="connect-header">Connect to Client</h1>
+    <div id="client-connection-info">When you have successfully downloaded and installed the Dota Illuminate Client, you must fill in the necessary info to connect it with your Twitch account.</div>
+    <div id="token-description">Copy the following token into your Dota Illuminate Client.</div>
+    <label id="token-label">
+      Token:
+      <textarea id="token" disabled="disabled"></textarea>
+    </label>
+  </div>
+  <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/config.js"></script>
+</body>
 </html>

@@ -20,3 +20,100 @@ body {
 div {
 	margin: 0px;
 }
+.talents {
+	display: none;
+	position: absolute;
+	height: 15.5em;
+	transform: translate(-50%, calc(-100% - 0.5em));
+	background: black;
+	color: white;
+}
+
+.talents .talent-header {
+	font-size: 1.2em;
+	text-transform: uppercase;
+	padding: 0.25em 0 0;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.talents .talent-lists {
+	display: flex;
+	text-align: center;
+	justify-content: space-around;
+}
+
+.talents .talent-list {
+	padding: 0;
+	margin: 0;
+}
+
+.talents .level-denominators {
+	z-index: 1;
+}
+
+.talents.showing {
+	display: block;
+}
+
+.talents ul {
+	display: inline-block;
+	list-style: none;
+}
+
+.talents .talent-list li {
+	margin: 0.5em 0;
+	padding: 0.5em 0.5em;
+	position: relative;
+	height: 2em;
+}
+
+.talents .talent-list:not(.level-denominators) li {
+	background: linear-gradient(90deg, #2d2d2d, #1f1f1f);
+}
+
+.talents .talent-list.left-list li {
+	background: linear-gradient(90deg, #1f1f1f, #2d2d2d);
+}
+
+.talents .talent-list.level-denominators li {
+	position: relative;
+}
+
+
+.talents .talent-list.level-denominators li .level-value {
+	color: orange;
+	text-shadow: red 0 0 1px;
+	filter: drop-shadow(0px 0px 2px red);
+	font-size: 1.25em;
+}
+
+.talents .talent-list.level-denominators li .level-circle {
+	position: absolute;
+	content: "";
+
+	left: -0.85em;
+	top: 0.175em;
+	width: 2.5em;
+	height: 2.5em;
+
+	background: black;
+	border: 0.15em solid #252525;
+	border-radius: 50%;
+	box-shadow: black 0 0 3px 1px;
+}
+
+.talents .talent-list:not(.level-denominators) {
+	width: 15em;
+}
+
+.talents .talent-list .level-value {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.talents .talent-list:not(.level-denominators) .level-value {
+	width: 13em;
+}

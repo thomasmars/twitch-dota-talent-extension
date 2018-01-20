@@ -2,6 +2,10 @@
 
 The Twitch Extensions Boilerplate acts as a simple starting point to create your Extension, as well as a simple method using Docker to locally serve your Extension for testing and development.
 
+# Getting started
+Run the following in the certs folder:
+`openssl req -newkey rsa:4096 -days 1001 -nodes -x509 -keyout testing.key -out testing.crt`
+
 ## Dependencies
 
 You will need:

@@ -13,3 +13,13 @@ or in the "license" file accompanying this file. This file is distributed on an 
   Set Javascript specific to the extension configuration view in this file.
 
 */
+
+if(window.Twitch.ext) {
+  window.Twitch.ext.onAuthorized(function (auth) {
+    // TODO: populate token element in UI with auth token.
+    const token = auth.token;
+
+    const tokenField = document.getElementById('token');
+    tokenField.innerText = token;
+  });
+}
