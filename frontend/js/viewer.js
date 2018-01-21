@@ -122,14 +122,10 @@ if(window.Twitch.ext) {
         }
 
       }
-    }).catch(err => {
-      console.log("registering viewer failed", err);
-    })
+    });
   });
 
   window.Twitch.ext.listen("broadcast", function (target, contentType, message) {
-    console.log("received broadcast message ??", target, contentType, message);
-
     const gameState = JSON.parse(message);
     setTalents(gameState.talents);
     setTalentsVisibility(gameState.displayingTalents);

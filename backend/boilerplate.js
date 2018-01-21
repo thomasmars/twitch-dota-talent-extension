@@ -1,7 +1,4 @@
 "use strict";
-const secret = '76mlt8m2vxd1bsyv72yfpqdcwgjzcw';
-const ebsSecret = 'lGHDHNpOm3EbPQqun7lgx+mvephEpV7hR4g5tHJ9YUU=';
-
 /*
 Copyright 2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at
@@ -12,16 +9,8 @@ or in the "license" file accompanying this file. This file is distributed on an 
 const express = require('express');
 const fs = require('fs');
 const https = require('https');
-const http = require('http');
 const bodyParser = require('body-parser');
-
 const app = express();
-
-// TODO: Determine how to get channel id.
-const userId = 19733510;
-const clientId = '92ydmhd13dzrhhp087hyxqu3jks7f6';
-const channelId = 19733510;
-const extensionId = 284034;
 
 app.use((req, res, next) => {
   console.log('Got request', req.path, req.method);
@@ -46,9 +35,3 @@ const PORT = 8080;
 https.createServer(options, app).listen(PORT, function () {
   console.log('Extension Boilerplate service running on https', PORT);
 });
-
-
-// const PORT = 8080;
-// http.createServer(app).listen(PORT, function () {
-//   console.log('Extension Boilerplate service running on http', PORT);
-// });
