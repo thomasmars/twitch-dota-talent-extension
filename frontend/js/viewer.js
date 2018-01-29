@@ -107,20 +107,26 @@ if(window.Twitch.ext) {
   window.Twitch.ext.onAuthorized(function (auth) {
 
     // Register userId and token with broadcaster
-    axios.post(`${backend}/register-viewer`, {
-      'userId': auth.clientId,
-      'channelId': auth.channelId,
-      'token': auth.token,
-    }).then(res => {
-      if (res.data.success) {
-        const gameState = res.data.gameState;
+    fetch(`${backend}/register-viewer`, {
+      method: 'POST',
+      body: JSON.stringify({
+        'userId': auth.clientId,
+        'channelId': auth.channelId,
+        'token': auth.token,
+      }),
+      headers: new Headers({
+        'Content-Type': 'application/json',
+      }),
+    }).then(res => res.json())
+      .then(data => {
+      if (data.success) {
+        const gameState = data.gameState;
         if (gameState.talents) {
           setTalents(gameState.talents);
         }
         if (gameState.displayingTalents) {
           setTalentsVisibility(gameState.displayingTalents);
         }
-
       }
     });
   });

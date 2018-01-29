@@ -35,3 +35,15 @@ div {
 	margin: 1em 0;
 }
 
+#get-client {
+	padding: 1em 2em;
+	background: linear-gradient(0deg, #285028, green);
+	color: white;
+	text-decoration: none;
+	border: 1px solid #212121;
+	border-radius: 2em;
+	font-size: 1em;
+	line-height: 5em;
+	box-shadow: 0 0 2px 1px #1d1d1d;
+}
+
